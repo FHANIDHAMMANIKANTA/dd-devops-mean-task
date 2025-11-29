@@ -21,5 +21,6 @@ module.exports = app => {
   // Delete all Tutorials
   router.delete("/", tutorials.deleteAll);
 
-  app.use('/api/tutorials', router);   // <-- THIS IS CRITICAL
+  // Mount this router at /api/tutorials
+  app.use("/api/tutorials", router);
 };
