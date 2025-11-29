@@ -33,8 +33,8 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to Test application." });
 });
 
-app.use("/api/tutorials", require("./app/routes/tutorial.routes"));
-
+// mount tutorials router
+require("./app/routes/tutorial.routes")(app);
 
 // ---------------------------
 // Server Startup
@@ -43,4 +43,3 @@ const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
-

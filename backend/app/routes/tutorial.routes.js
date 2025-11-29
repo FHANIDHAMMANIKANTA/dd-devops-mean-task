@@ -20,6 +20,6 @@ module.exports = (app) => {
   // Delete all Tutorials
   router.delete("/", tutorials.deleteAll);
 
-  // ✅ IMPORTANT: mount at /tutorials (NO /api here)
+  // Mount router at /tutorials (NO /api here)
   app.use("/tutorials", router);
 };
