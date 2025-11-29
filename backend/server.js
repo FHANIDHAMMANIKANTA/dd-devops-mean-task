@@ -33,7 +33,8 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to Test application." });
 });
 
-require("./app/routes/turorial.routes")(app);
+require("./app/routes/tutorial.routes")(app);
+
 
 // ---------------------------
 // Server Startup
