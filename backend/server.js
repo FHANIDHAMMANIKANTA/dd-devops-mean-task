@@ -33,7 +33,7 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to Test application." });
 });
 
-require("./app/routes/tutorial.routes")(app);
+app.use("/api/tutorials", require("./app/routes/tutorial.routes"));
 
 
 // ---------------------------
